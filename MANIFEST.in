@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include tea_wages *.css
+recursive-include tea_wages *.csv
+recursive-include tea_wages *.html
+recursive-include tea_wages *.ico
+recursive-include tea_wages *.js
+recursive-include tea_wages *.json
+recursive-include tea_wages *.md
+recursive-include tea_wages *.png
+recursive-include tea_wages *.py
+recursive-include tea_wages *.svg
+recursive-include tea_wages *.txt
+recursive-exclude tea_wages *.pyc
