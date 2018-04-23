@@ -5,6 +5,22 @@
 from __future__ import unicode_literals
 import frappe
 from frappe.model.document import Document
+from frappe.utils import getdate
+
 
 class TearpWagesSetup(Document):
-	pass
+	def validate(self):
+		self.valid_wage_date()
+
+	def valid_wage_date(self):
+		start_date = getdate(self.from_date)
+		end_date = getdate(self.to_date)
+		diff = (end_date - start_date).days
+		if self.wage_frequency == 'Weekly':
+			if diff < 6 or diff > 6:
+					frappe.throw("Please enter a date equal to 7 days!!!")
+		elif self.wage_frequency == 'Fortnightly':
+			if diff < 13 or diff > 13:
+				frappe.throw("Please enter a date equal to 14 days!!!")
+		else:
+			frappe.throw("Please enter a valid date!!!")
