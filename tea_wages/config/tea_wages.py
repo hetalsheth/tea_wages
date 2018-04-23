@@ -9,19 +9,19 @@ def get_data():
             "items": [
                         {
                             "type": "doctype",
-                            "name": "Tea Estate",
+                            "name": "Tearp Estate",
                             "description": _("Information for Tea Gardens.")
                         },
 
                         {
                             "type": "doctype",
-                            "name": "Tea Wage Structure",
+                            "name": "Tearp Wage Structure",
                             "description": _("Information for Wage Structure.")
                         },
 
                         {
                             "type": "doctype",
-                            "name": "Tea Labors Information",
+                            "name": "Tearp Labors Information",
                             "description": _("Information for Labors.")
                         },
 
