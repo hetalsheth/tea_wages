@@ -19,6 +19,12 @@ def get_data():
                             "description": _("Information for Wage Structure.")
                         },
 
+			{
+                            "type": "doctype",
+                            "name": "Tearp Labor Family",
+                            "description": _("Information for Labor Family Information.")
+                        },
+
                         {
                             "type": "doctype",
                             "name": "Tearp Labors Information",
