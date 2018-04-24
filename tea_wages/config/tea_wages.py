@@ -44,8 +44,8 @@ def get_data():
                         },
 {
                             "type": "doctype",
-                            "name": "Tearp Wages Entry",
-                            "description": _("Information for Wages Entry and Attendance.")
+                            "name": "Tearp Wages Reconciliation",
+                            "description": _("Information for Wages Reconciliation.")
                         },
 
                         ]
