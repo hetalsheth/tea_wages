@@ -19,7 +19,7 @@ def get_data():
                             "description": _("Information for Wage Structure.")
                         },
 
-			{
+			            {
                             "type": "doctype",
                             "name": "Tearp Labor Family",
                             "description": _("Information for Labor Family Information.")
@@ -40,7 +40,13 @@ def get_data():
                         {
                             "type": "doctype",
                             "name": "Tearp Wages Setup",
-                            "description": _("Information for Kamjari Codes.")
+                            "description": _("Information for Wage Span.")
+                        },
+
+                        {
+                            "type": "doctype",
+                            "name": "Tearp Wages Entry",
+                            "description": _("Information for Wages Entry and Attendance.")
                         },
 
                         ]
