@@ -5,6 +5,7 @@ def get_data():
     return[
         {
             "label": _("Tearp Wages Section"),
+            "color": "#9d19df",
             "icon": "icon-cog",
             "items": [
                         {
@@ -19,7 +20,7 @@ def get_data():
                             "description": _("Information for Wage Structure.")
                         },
 
-			{
+			            {
                             "type": "doctype",
                             "name": "Tearp Labor Family",
                             "description": _("Information for Labor Family Information.")
@@ -42,7 +43,7 @@ def get_data():
                             "name": "Tearp Wages Setup",
                             "description": _("Information for Kamjari Codes.")
                         },
-{
+                        {
                             "type": "doctype",
                             "name": "Tearp Wages Reconciliation",
                             "description": _("Information for Wages Reconciliation.")
