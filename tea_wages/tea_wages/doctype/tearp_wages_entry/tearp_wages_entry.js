@@ -42,3 +42,15 @@ frappe.ui.form.on('Tearp Wages Entry', 'validate', function(frm) {
 		}
 	}
 	 });
+
+
+
+erpnext.stock.StockReconciliation = erpnext.stock.StockController.extend({
+	setup: function() {
+	var me = this;
+	this.frm.get_docfield("attendance").allow_bulk_edit = 1;
+	}
+
+});
+
+cur_frm.cscript = new erpnext.stock.StockReconciliation({frm: cur_frm});
