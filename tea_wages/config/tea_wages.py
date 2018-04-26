@@ -41,7 +41,13 @@ def get_data():
                         {
                             "type": "doctype",
                             "name": "Tearp Wages Setup",
-                            "description": _("Information for Kamjari Codes.")
+                            "description": _("Information for Wage Span.")
+                        },
+
+                        {
+                            "type": "doctype",
+                            "name": "Tearp Wages Entry",
+                            "description": _("Information for Wages Entry and Attendance.")
                         },
                         {
                             "type": "doctype",
