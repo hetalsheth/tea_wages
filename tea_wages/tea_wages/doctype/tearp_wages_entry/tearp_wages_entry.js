@@ -54,3 +54,49 @@ erpnext.stock.StockReconciliation = erpnext.stock.StockController.extend({
 });
 
 cur_frm.cscript = new erpnext.stock.StockReconciliation({frm: cur_frm});
+
+
+/*frappe.ui.form.on('Tearp Wages Entry', {
+	after_save: function(frm) {
+		if(frm.doc.attendance==){
+			frm.add_custom_button(__('Tearp Labors Information'), function(){
+				frappe.model.with_doctype('Tearp Labors Information', function(){
+					var tr = frappe.model.get_new_doc('Tearp Labors Information');
+					frappe.set_route('Form', 'Tearp Labors Information', tr.name);
+					});
+				}, __("Make"));
+			}
+	}
+});*/
+
+
+
+frappe.ui.form.on('Tearp Wages Entry', {
+	after_save: function(frm) {
+		frm.add_custom_button(__('Tearp Wages Reconciliation'), function(){
+			frappe.model.with_doctype('Tearp Wages Reconciliation', function(){
+				var tr = frappe.model.get_new_doc('Tearp Wages Reconciliation');
+				frappe.set_route('Form', 'Tearp Wages Reconciliation', tr.name);
+				});
+			}, __("Make"));
+	}
+});
+
+
+
+/*if (frm.doc.docstatus===0) {
+			frm.add_custom_button(__('Purchase Invoice'), function() {
+				erpnext.utils.map_current_doc({
+					method: "erpnext.accounts.doctype.purchase_invoice.purchase_invoice.make_stock_entry",
+					source_doctype: "Purchase Invoice",
+					target: frm,
+					date_field: "posting_date",
+					setters: {
+						supplier: frm.doc.supplier || undefined,
+					},
+					get_query_filters: {
+						docstatus: 1
+					}
+				})
+			}, __("Get items from"));
+}*/
