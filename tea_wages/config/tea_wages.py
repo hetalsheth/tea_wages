@@ -49,12 +49,15 @@ def get_data():
                             "name": "Tearp Wages Entry",
                             "description": _("Information for Wages Entry and Attendance.")
                         },
+<<<<<<< HEAD
                         {
                             "type": "doctype",
                             "name": "Tearp Wages Reconciliation",
                             "description": _("Information for Wages Reconciliation.")
                         },
 
+=======
+>>>>>>> wages_hetal
                         ]
         }
     ]
