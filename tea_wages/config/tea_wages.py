@@ -48,7 +48,6 @@ def get_data():
                             "name": "Tearp Wages Entry",
                             "description": _("Information for Wages Entry and Attendance.")
                         },
-
                         ]
         }
     ]
