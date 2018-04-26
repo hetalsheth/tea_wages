@@ -55,9 +55,20 @@ def get_data():
                             "name": "Tearp Wages Reconciliation",
                             "description": _("Information for Wages Reconciliation.")
                         },
+			            {
+                            "type": "doctype",
+                            "name": "Tearp Advance Entry",
+                            "description": _("Information for Advance Entry.")
+                        },
+			            {
+                            "type": "doctype",
+                            "name": "Tearp LIC Entry",
+                            "description": _("Information for LIC Entry.")
+                        },
 
 =======
 >>>>>>> wages_hetal
                         ]
         }
+
     ]
