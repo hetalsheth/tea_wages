@@ -5,6 +5,7 @@ def get_data():
     return[
         {
             "label": _("Tearp Wages Section"),
+            "color": "#9d19df",
             "icon": "icon-cog",
             "items": [
                         {
@@ -47,6 +48,11 @@ def get_data():
                             "type": "doctype",
                             "name": "Tearp Wages Entry",
                             "description": _("Information for Wages Entry and Attendance.")
+                        },
+                        {
+                            "type": "doctype",
+                            "name": "Tearp Wages Reconciliation",
+                            "description": _("Information for Wages Reconciliation.")
                         },
 
                         ]
