@@ -6,7 +6,11 @@ frappe.ui.form.on('Tearp Wages Setup', {
 
 	}
 });
-
+<<<<<<< HEAD
+// Defining name series for different wage frequency
+=======
+ // Defining naming series for different wage frequency
+>>>>>>> wage_aditya
 frappe.ui.form.on('Tearp Wages Setup', 'validate', function(frm) {
 	frm.naming_series = '';
 	if(frm.doc.wage_frequency == 'Weekly'){

@@ -6,32 +6,25 @@ import frappe
 from frappe import _
 from frappe.model.document import Document
 from frappe import utils
-
+ # Function fetching the data into the columns defined
 def execute(filters=None):
 	data = []
 	columns = get_columns()
 	worker = get_worker_id(filters)
 	for i in worker:
 		data.append([i.worker_id,i.worker_name,i.deduction,i.adv_amount,i.adv_status])
-	'''	garden = get_garden(filters, i.worker_id)
-		deduction = get_deduction(filters, i.worker_id)
-		adv_amount = get_adv_amount(filters, i.worker_id)
-		data.append([garden, i.worker_id, deduction, adv_amount, filters.md])'''
 
 	return columns, data
-
+#Function fetching the data from Tearp Advance Entry Doctype
 def get_worker_id(filters):
-	return frappe.db.sql("""select distinct adv_status,worker_id,worker_name,deduction,adv_amount from `tabTearp Advance Entry` where garden = %s """,(filters.garden),as_dict=1)
+<<<<<<< HEAD
+	return frappe.db.sql("""select worker_id,worker_name,deduction,adv_amount,adv_status from `tabTearp Advance Entry` where garden = %s """,(filters.garden),as_dict=1)
 
-'''def get_garden(filter, worker_id):
-	return frappe.db.sql("""select abbv from `tabTearp Estate` where worker_id = %s """, (worker_id))
+#Function for appending(adding) data in report table
+=======
+	return frappe.db.sql("""select distinct worker_id,worker_name,deduction,adv_amount,adv_status from `tabTearp Advance Entry` where garden = %s """,(filters.garden),as_dict=1)
 
-def get_deduction(filter, worker_id):
-	return frappe.db.sql("""select deduction from `tabTearp Advance Entry` where worker_id = %s """, (worker_id))
-
-def get_adv_amount(filter, worker_id):
-	return frappe.db.sql("""select adv_amount from `tabTearp Advance Entry` where worker_id = %s """, (worker_id))
-'''
+>>>>>>> wage_aditya
 def get_columns():
 	columns = [{
 		"fieldname": "worker_id",
@@ -68,9 +61,9 @@ def get_columns():
 	columns.append({
 		"fieldname": "adv_status",
 		"label": _("Advance Status"),
-		"fieldtype": "Float",
+		"fieldtype": "Data",
 		"option":"",
-		"width":90
+		"width":10
 	})
 
 	return columns

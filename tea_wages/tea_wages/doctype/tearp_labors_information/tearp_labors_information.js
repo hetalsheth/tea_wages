@@ -7,14 +7,31 @@ frappe.ui.form.on('Tearp Labors Information', {
 	}
 });
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+// Entry of dependent names in dependent child table
+=======
+// Entry for details of dependents
+>>>>>>> wage_aditya
+>>>>>>> b39bdcae45948ecc59dc5aeda6d212f817ed0b80
 frappe.ui.form.on("Tearp Labors Information", "validate", function(frm) {
   for(var i in frm.doc.dependent_name){
      frm.doc.dependent_name[i].worker_id = frm.doc.worker_id;
      frm.doc.dependent_name[i].worker_name = frm.doc.worker_name;
      frm.doc.dependent_name[i].dependents = frm.doc.dependents;
+<<<<<<< HEAD
+=======
+		 frm.doc.dependent_name[i].dependents = frm.doc.dependents
+>>>>>>> b39bdcae45948ecc59dc5aeda6d212f817ed0b80
      }
   });
 
+<<<<<<< HEAD
+// Calculation of ages of dependents whether they are Minor or Adult
+=======
+// Age Calculation of dependents whether they are Minor or Adult
+>>>>>>> wage_aditya
 	frappe.ui.form.on("Tearp Labors Information", "validate", function(frm) {
 	  for(var i in frm.doc.dependent_name){
 	    var birth_date=frm.doc.dependent_name[i].dob

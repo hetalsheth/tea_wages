@@ -13,13 +13,13 @@ class TearpLaborFamily(Document):
 
 
 
-
+# Definition for age calculation from present date
 	def age_validate(self,dob):
 		dob1=self.dob
 		today = date.today()
 		self.age = today.year - dob1.year - ((today.month, today.day) < (dob1.month, born.day))
 		return self.age
-
+# Function for determining the type of dependent
 	def dependent_type(self):
 		self.age=age_validate(dob)
 		self.dep_type=None

@@ -624,6 +624,10 @@
  "show_name_in_global_search": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
+<<<<<<< HEAD
  "track_changes": 1, 
+=======
+ "track_changes": 1,
+>>>>>>> b39bdcae45948ecc59dc5aeda6d212f817ed0b80
  "track_seen": 1
 }
