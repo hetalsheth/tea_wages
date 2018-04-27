@@ -10,11 +10,8 @@ frappe.ui.form.on('Tearp Wages Reconciliation', {
 
 frappe.ui.form.on("Tearp Wages Reconciliation", "validate", function(frm) {
   frm.naming_series = "";
-
-	 name=frm.doc.garden+"/"+frm.doc.date;
-   frm.set_value("naming_series",name);
-
-
+	name=frm.doc.garden+"/"+frm.doc.date;
+  frm.set_value("naming_series",name);
 });
 // Reflecting date in the record date in attendence child table
 

@@ -12,7 +12,8 @@ frappe.ui.form.on("Tearp Labors Information", "validate", function(frm) {
      frm.doc.dependent_name[i].worker_id = frm.doc.worker_id;
      frm.doc.dependent_name[i].worker_name = frm.doc.worker_name;
      frm.doc.dependent_name[i].dependents = frm.doc.dependents;
-		 frm.doc.dependent_name[i].dependents = frm.doc.dependents
+
+		 frm.doc.dependent_name[i].dependents = frm.doc.dependents;
      }
   });
 // Age Calculation of dependents whether they are Minor or Adult
