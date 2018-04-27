@@ -6,7 +6,7 @@ frappe.ui.form.on('Tearp Wages Setup', {
 
 	}
 });
-
+ // Defining naming series for different wage frequency
 frappe.ui.form.on('Tearp Wages Setup', 'validate', function(frm) {
 	frm.naming_series = '';
 	if(frm.doc.wage_frequency == 'Weekly'){

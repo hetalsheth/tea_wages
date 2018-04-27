@@ -1,5 +1,6 @@
 from frappe import _
 
+# Creating dashboard in the Tearp labors Information doctype
 def get_data():
 	return {
 			'heatmap': True,

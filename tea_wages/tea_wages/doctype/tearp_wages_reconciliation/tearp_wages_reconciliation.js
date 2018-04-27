@@ -7,6 +7,7 @@ frappe.ui.form.on('Tearp Wages Reconciliation', {
 	}
 });
 
+// Defining the name series for each Wage Reconciliation
 frappe.ui.form.on("Tearp Wages Reconciliation", "validate", function(frm) {
   frm.naming_series = "";
 
@@ -16,12 +17,15 @@ frappe.ui.form.on("Tearp Wages Reconciliation", "validate", function(frm) {
 
 });
 
+// Reflecting date in the record date in attendence child table
 frappe.ui.form.on("Tearp Wages Reconciliation", "validate", function(frm) {
   for(var i in frm.doc.attendence){
      frm.doc.attendence[i].record_date = frm.doc.date;
      }
   });
 
+
+// Calculating rates for different attendence type
 	frappe.ui.form.on("Tearp Wages Reconciliation", "validate", function(frm){
 		var rate = 137.50;
 		for(var i in frm.doc.attendence){
@@ -42,3 +46,14 @@ frappe.ui.form.on("Tearp Wages Reconciliation", "validate", function(frm) {
 			}
 		}
 	});
+
+// Calculating total number of labors from the attendence child table
+	frappe.ui.form.on("Tearp Wages Reconciliation", "validate", function(frm) {
+  var total_labor = 0
+  for(var i in frm.doc.attendence){
+     total_labor += 1;
+
+    }
+    frm.set_value("total_labor",total_labor);
+
+  });

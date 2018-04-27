@@ -2,6 +2,7 @@
 // For license information, please see license.txt
 /* eslint-disable */
 
+// Input Field for generating report table
 frappe.query_reports["Tearp LIC Report"] = {
 	"filters": [
 		{

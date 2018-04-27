@@ -20,46 +20,68 @@ def get_data():
                             "description": _("Information for Wage Structure.")
                         },
 
-			            {
-                            "type": "doctype",
-                            "name": "Tearp Labor Family",
-                            "description": _("Information for Labor Family Information.")
-                        },
-
                         {
                             "type": "doctype",
                             "name": "Tearp Labors Information",
                             "description": _("Information for Labors.")
                         },
-
                         {
                             "type": "doctype",
                             "name": "Tearp kamjari List",
                             "description": _("Information for Kamjari Codes.")
                         },
-
                         {
                             "type": "doctype",
                             "name": "Tearp Wages Setup",
-                            "description": _("Information for Kamjari Codes.")
+                            "description": _("Information for Wage Span.")
+                        },
+                    ]
+            },
+        {
+            "label": _("Tearp Entry Section"),
+            "icon": "icon-cog",
+            "items": [
+                        {
+                        "type": "doctype",
+                        "name": "Tearp Wages Entry",
+                        "description": _("Information for Wages Entry and Attendance.")
                         },
                         {
-                            "type": "doctype",
-                            "name": "Tearp Wages Reconciliation",
-                            "description": _("Information for Wages Reconciliation.")
+                        "type": "doctype",
+                        "name": "Tearp Wages Reconciliation",
+                        "description": _("Information for Wages Reconciliation.")
                         },
-			            {
-                            "type": "doctype",
-                            "name": "Tearp Advance Entry",
-                            "description": _("Information for Advance Entry.")
-                        },
-			            {
-                            "type": "doctype",
-                            "name": "Tearp LIC Entry",
-                            "description": _("Information for LIC Entry.")
+                        {
+                        "type": "doctype",
+                        "name": "Tearp Advance Entry",
+                        "description": _("Information for Advance Entry.")
                         },
 
-                        ]
+                        {
+                        "type": "doctype",
+                        "name": "Tearp LIC Entry",
+                        "description": _("Information for LIC Entry.")
+                        },
+                      ]
+          },
+        {
+            "label": _("Tearp Report Section"),
+            "icon": "icon-cog",
+            "items": [
+                        {
+                            "type": "report",
+                            "is_query_report": True,
+                            "name": "Tearp Advance Report",
+                            "description": _("Information for Advance Entry")
+                        },
+                        {
+                            "type": "report",
+                            "is_query_report": True,
+                            "name": "Tearp LIC Report",
+                            "description": _("Information for LIC Entry")
+                        }
+                     ]
         }
+
 
     ]
