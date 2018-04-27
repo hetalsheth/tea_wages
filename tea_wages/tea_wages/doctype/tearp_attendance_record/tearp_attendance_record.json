@@ -240,8 +240,13 @@
    "allow_on_submit": 0,
    "bold": 0,
    "collapsible": 0,
+<<<<<<< HEAD
    "columns": 0,
    "fieldname": "attendence_type",
+=======
+   "columns": 1,
+   "fieldname": "attendance_type",
+>>>>>>> wage_aditya
    "fieldtype": "Select",
    "hidden": 0,
    "ignore_user_permissions": 0,
@@ -471,7 +476,11 @@
  "issingle": 0,
  "istable": 0,
  "max_attachments": 0,
+<<<<<<< HEAD
  "modified": "2018-04-27 11:52:54.031605",
+=======
+ "modified": "2018-04-27 12:58:04.967659",
+>>>>>>> wage_aditya
  "modified_by": "Administrator",
  "module": "Tea Wages",
  "name": "Tearp Attendance Record",

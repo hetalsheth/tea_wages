@@ -8,7 +8,11 @@
  "icon": "octicon octicon-book",
  "idx": 0,
  "is_standard": "Yes",
+<<<<<<< HEAD
  "modified": "2018-04-27 10:45:20.694108",
+=======
+ "modified": "2018-04-27 12:15:24.077816",
+>>>>>>> wage_aditya
  "modified_by": "Administrator",
  "module": "Tea Wages",
  "name": "Tearp Advance Report",
@@ -18,10 +22,17 @@
  "report_type": "Script Report",
  "roles": [
   {
+<<<<<<< HEAD
    "role": "System Manager"
   },
   {
    "role": "Administrator"
+=======
+   "role": "Administrator"
+  },
+  {
+   "role": "System Manager"
+>>>>>>> wage_aditya
   }
  ]
 }

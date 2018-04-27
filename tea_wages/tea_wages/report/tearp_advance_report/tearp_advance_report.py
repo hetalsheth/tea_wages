@@ -17,9 +17,14 @@ def execute(filters=None):
 	return columns, data
 #Function fetching the data from Tearp Advance Entry Doctype
 def get_worker_id(filters):
+<<<<<<< HEAD
 	return frappe.db.sql("""select worker_id,worker_name,deduction,adv_amount,adv_status from `tabTearp Advance Entry` where garden = %s """,(filters.garden),as_dict=1)
 
 #Function for appending(adding) data in report table
+=======
+	return frappe.db.sql("""select distinct worker_id,worker_name,deduction,adv_amount,adv_status from `tabTearp Advance Entry` where garden = %s """,(filters.garden),as_dict=1)
+
+>>>>>>> wage_aditya
 def get_columns():
 	columns = [{
 		"fieldname": "worker_id",

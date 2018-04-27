@@ -303,7 +303,11 @@
  "issingle": 0,
  "istable": 0,
  "max_attachments": 0,
+<<<<<<< HEAD
  "modified": "2018-04-26 16:54:46.702117",
+=======
+ "modified": "2018-04-27 12:11:47.634209",
+>>>>>>> wage_aditya
  "modified_by": "Administrator",
  "module": "Tea Wages",
  "name": "Tearp LIC Entry",
