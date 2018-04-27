@@ -8,13 +8,10 @@ frappe.ui.form.on('Tearp Wages Entry', {
 		}
 	}
 });
-<<<<<<< HEAD
-//Entry for the required data in the attendence child table
-=======
+
 
 // Reflecting the record_date, garden, book_code in the child table
 
->>>>>>> ad0daf0c54444f2588994e6a74212a01287b49ae
 frappe.ui.form.on('Tearp Wages Entry', 'validate', function(frm) {
   for(var i in frm.doc.attendance){
 		 frm.doc.attendance[i].record_date = frm.doc.record_date;
@@ -23,9 +20,6 @@ frappe.ui.form.on('Tearp Wages Entry', 'validate', function(frm) {
 		 cur_frm.add_fetch('tearp_labors_information','worker_name',cur_frm.doc.attendance[i].worker_name)
      }
   });
-<<<<<<< HEAD
-// Defining name series for each wage entry
-=======
 
 /*frappe.ui.form.on('Tearp Wages Entry', 'validate', function(frm) {
 	var today_date=frappe.datetime.nowdate();
@@ -37,18 +31,13 @@ frappe.ui.form.on('Tearp Wages Entry', 'validate', function(frm) {
 });*/
 
 // Naming series
->>>>>>> ad0daf0c54444f2588994e6a74212a01287b49ae
 frappe.ui.form.on('Tearp Wages Entry', 'validate', function(frm) {
 	frm.naming_series = '';
 	name = frm.doc.garden+"/"+frm.doc.book_code+"/"+frm.doc.record_date;
 	frm.set_value('naming_series', name);
   });
 
-<<<<<<< HEAD
-// Defining different rate for different attendence type
-=======
-// Wage Rate for each entry
->>>>>>> ad0daf0c54444f2588994e6a74212a01287b49ae
+
 frappe.ui.form.on('Tearp Wages Entry', 'validate', function(frm) {
 	var rate = 137.50;
 	for(var i in frm.doc.attendance){
@@ -81,10 +70,9 @@ erpnext.stock.StockReconciliation = erpnext.stock.StockController.extend({
 });
 cur_frm.cscript = new erpnext.stock.StockReconciliation({frm: cur_frm});
 
-<<<<<<< HEAD
-=======
+
 //Make button
->>>>>>> ad0daf0c54444f2588994e6a74212a01287b49ae
+
 frappe.ui.form.on('Tearp Wages Entry', {
 	after_save: function(frm) {
 		frm.add_custom_button(__('Tearp Wages Reconciliation'), function(){
