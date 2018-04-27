@@ -6,7 +6,7 @@ frappe.ui.form.on('Tearp Wages Entry', {
 
 	}
 });
-
+//Entry for the required data in the attendence child table
 frappe.ui.form.on('Tearp Wages Entry', 'validate', function(frm) {
   for(var i in frm.doc.attendance){
 		 frm.doc.attendance[i].record_date = frm.doc.record_date;
@@ -14,14 +14,14 @@ frappe.ui.form.on('Tearp Wages Entry', 'validate', function(frm) {
 		 frm.doc.attendance[i].book_code = frm.doc.book_code;
      }
   });
-
+// Defining name series for each wage entry
 frappe.ui.form.on('Tearp Wages Entry', 'validate', function(frm) {
 	frm.naming_series = '';
 	name = frm.doc.garden+"/"+frm.doc.book_code+"/"+frm.doc.record_date;
 	frm.set_value('naming_series', name);
   });
 
-
+// Defining different rate for different attendence type
 frappe.ui.form.on('Tearp Wages Entry', 'validate', function(frm) {
 	var rate = 137.50;
 	for(var i in frm.doc.attendance){
@@ -55,22 +55,6 @@ erpnext.stock.StockReconciliation = erpnext.stock.StockController.extend({
 
 cur_frm.cscript = new erpnext.stock.StockReconciliation({frm: cur_frm});
 
-
-/*frappe.ui.form.on('Tearp Wages Entry', {
-	after_save: function(frm) {
-		if(frm.doc.attendance==){
-			frm.add_custom_button(__('Tearp Labors Information'), function(){
-				frappe.model.with_doctype('Tearp Labors Information', function(){
-					var tr = frappe.model.get_new_doc('Tearp Labors Information');
-					frappe.set_route('Form', 'Tearp Labors Information', tr.name);
-					});
-				}, __("Make"));
-			}
-	}
-});*/
-
-
-
 frappe.ui.form.on('Tearp Wages Entry', {
 	after_save: function(frm) {
 		frm.add_custom_button(__('Tearp Wages Reconciliation'), function(){
@@ -81,22 +65,3 @@ frappe.ui.form.on('Tearp Wages Entry', {
 			}, __("Make"));
 	}
 });
-
-
-
-/*if (frm.doc.docstatus===0) {
-			frm.add_custom_button(__('Purchase Invoice'), function() {
-				erpnext.utils.map_current_doc({
-					method: "erpnext.accounts.doctype.purchase_invoice.purchase_invoice.make_stock_entry",
-					source_doctype: "Purchase Invoice",
-					target: frm,
-					date_field: "posting_date",
-					setters: {
-						supplier: frm.doc.supplier || undefined,
-					},
-					get_query_filters: {
-						docstatus: 1
-					}
-				})
-			}, __("Get items from"));
-}*/

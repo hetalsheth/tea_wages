@@ -1,5 +1,6 @@
 from frappe import _
 
+# Adding heatmap and links for some doctype in Tearp Labors Information 
 def get_data():
 	return {
 			'heatmap': True,

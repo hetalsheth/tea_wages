@@ -11,7 +11,7 @@ from frappe.utils import getdate
 class TearpWagesSetup(Document):
 	def validate(self):
 		self.valid_wage_date()
-
+# Definition for wage frequency from given start and end dates
 	def valid_wage_date(self):
 		start_date = getdate(self.from_date)
 		end_date = getdate(self.to_date)

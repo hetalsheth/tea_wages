@@ -8,7 +8,7 @@
  "icon": "octicon octicon-book",
  "idx": 0,
  "is_standard": "Yes",
- "modified": "2018-04-26 11:41:32.562255",
+ "modified": "2018-04-27 10:45:20.694108",
  "modified_by": "Administrator",
  "module": "Tea Wages",
  "name": "Tearp Advance Report",
@@ -16,5 +16,12 @@
  "ref_doctype": "Tearp Advance Entry",
  "report_name": "Tearp Advance Report",
  "report_type": "Script Report",
- "roles": []
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Administrator"
+  }
+ ]
 }

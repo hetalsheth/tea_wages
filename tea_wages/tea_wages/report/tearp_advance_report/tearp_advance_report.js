@@ -2,16 +2,10 @@
 // For license information, please see license.txt
 /* eslint-disable */
 
+//Search field by which the report table will be filtered
 frappe.query_reports["Tearp Advance Report"] = {
 	"filters": [
-		/*			{
-						"fieldname":"date",
-            "label": __("DATE"),
-            "fieldtype": "Date",
-            "options": "",
-            "default": frappe.datetime.get_today(),
-            "reqd":0
-					}, */
+
 					{
 						"fieldname":"garden",
             "label": __("Garden"),
@@ -20,13 +14,6 @@ frappe.query_reports["Tearp Advance Report"] = {
             "default": "",
             "reqd":0
 					}
-		/*			{
-						"fieldname":"worker_id",
-            "label": __("Worker ID"),
-            "fieldtype": "Link",
-            "options": "Tearp Labors Information",
-            "default": "",
-            "reqd":0
-					}  */
+	
 	]
 }
