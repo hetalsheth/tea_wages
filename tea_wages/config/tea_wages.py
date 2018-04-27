@@ -55,7 +55,6 @@ def get_data():
                         "name": "Tearp Advance Entry",
                         "description": _("Information for Advance Entry.")
                         },
-<<<<<<< HEAD
                         {
                         "type": "doctype",
                         "name": "Tearp LIC Entry",
@@ -64,29 +63,4 @@ def get_data():
                       ]
         }
 
-
-=======
-<<<<<<< HEAD
-                        {
-                            "type": "doctype",
-                            "name": "Tearp Wages Reconciliation",
-                            "description": _("Information for Wages Reconciliation.")
-                        },
-			            {
-                            "type": "doctype",
-                            "name": "Tearp Advance Entry",
-                            "description": _("Information for Advance Entry.")
-                        },
-			            {
-                            "type": "doctype",
-                            "name": "Tearp LIC Entry",
-                            "description": _("Information for LIC Entry.")
-                        },
-
-=======
->>>>>>> wages_hetal
-                        ]
-        }
-
->>>>>>> 2aa2510e89dd239148ddea3e77722b9c2263f583
     ]
