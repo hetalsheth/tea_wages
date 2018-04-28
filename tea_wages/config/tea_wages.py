@@ -13,7 +13,6 @@ def get_data():
                             "name": "Tearp Estate",
                             "description": _("Information for Tea Gardens.")
                         },
-
                         {
                             "type": "doctype",
                             "name": "Tearp Wage Structure",
@@ -35,11 +34,18 @@ def get_data():
                             "description": _("Information for Wage Span.")
                         },
                         {
-<<<<<<< HEAD
-                            "type": "doctype",
-                            "name": "Tearp Maternity Register",
-                            "description": _("Information for Maternity Registration.")
-=======
+                        "type": "doctype",
+                        "name": "Tearp Maternity Register",
+                        "description": _("Information for Maternity Registration.")
+                        },
+                    ]
+            },
+        {
+            "label": _("Tearp Wages Section"),
+            "color": "#9d19df",
+            "icon": "icon-cog",
+            "items": [
+                        {
                         "type": "doctype",
                         "name": "Tearp Wages Entry",
                         "description": _("Information for Wages Entry and Attendance.")
@@ -48,23 +54,9 @@ def get_data():
                         "type": "doctype",
                         "name": "Tearp Wages Reconciliation",
                         "description": _("Information for Wages Reconciliation.")
->>>>>>> 98441e14f0a85b9cf5155ea1d48fe37cada4db44
                         },
                         {
                         "type": "doctype",
-<<<<<<< HEAD
-                        "name": "Tearp Wages Entry",
-                        "description": _("Information for Wages Entry and Attendance.")
-                        },
-                        {
-                        "type": "doctype",
-                        "name": "Tearp Wages Reconciliation",
-                        "description": _("Information for Wages Reconciliation.")
-                        },
-                        {
-                        "type": "doctype",
-=======
->>>>>>> 98441e14f0a85b9cf5155ea1d48fe37cada4db44
                         "name": "Tearp Advance Entry",
                         "description": _("Information for Advance Entry.")
                         },
@@ -74,7 +66,6 @@ def get_data():
                         "description": _("Information for LIC Entry.")
                         },
                       ]
-<<<<<<< HEAD
             },
         {
             "label": _("Tearp Report Section"),
@@ -94,8 +85,4 @@ def get_data():
                         }
                      ]
         }
-=======
-        }
-
->>>>>>> 98441e14f0a85b9cf5155ea1d48fe37cada4db44
-    ]
+]
