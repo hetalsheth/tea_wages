@@ -9,9 +9,7 @@ frappe.ui.form.on('Tearp Wages Entry', {
 	}
 });
 
-
 // Reflecting the record_date, garden, book_code in the child table
-
 frappe.ui.form.on('Tearp Wages Entry', 'validate', function(frm) {
   for(var i in frm.doc.attendance){
 		 frm.doc.attendance[i].record_date = frm.doc.record_date;
@@ -20,24 +18,13 @@ frappe.ui.form.on('Tearp Wages Entry', 'validate', function(frm) {
 		 cur_frm.add_fetch('tearp_labors_information','worker_name',cur_frm.doc.attendance[i].worker_name)
      }
   });
-
-/*frappe.ui.form.on('Tearp Wages Entry', 'validate', function(frm) {
-	var today_date=frappe.datetime.nowdate();
-	if (frappe.datetime.frm.doc.record_date > today_date)
-	{
-		frappe.msgprint(__("You can not select date more than today's date."));
-		frappe.validated = false;
-	}
-});*/
-
-// Naming series
+// Defining name series for each wage entry
 frappe.ui.form.on('Tearp Wages Entry', 'validate', function(frm) {
 	frm.naming_series = '';
 	name = frm.doc.garden+"/"+frm.doc.book_code+"/"+frm.doc.record_date;
 	frm.set_value('naming_series', name);
   });
-
-
+// Wage Rate for each entry
 frappe.ui.form.on('Tearp Wages Entry', 'validate', function(frm) {
 	var rate = 137.50;
 	for(var i in frm.doc.attendance){
@@ -69,10 +56,7 @@ erpnext.stock.StockReconciliation = erpnext.stock.StockController.extend({
 
 });
 cur_frm.cscript = new erpnext.stock.StockReconciliation({frm: cur_frm});
-
-
 //Make button
-
 frappe.ui.form.on('Tearp Wages Entry', {
 	after_save: function(frm) {
 		frm.add_custom_button(__('Tearp Wages Reconciliation'), function(){

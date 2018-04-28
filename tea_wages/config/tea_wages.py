@@ -34,14 +34,25 @@ def get_data():
                             "name": "Tearp Wages Setup",
                             "description": _("Information for Wage Span.")
                         },
-                    ]
-            },
-        {
-            "label": _("Tearp Entry Section"),
-            "icon": "icon-cog",
-            "items": [
+                        {
+<<<<<<< HEAD
+                            "type": "doctype",
+                            "name": "Tearp Maternity Register",
+                            "description": _("Information for Maternity Registration.")
+=======
+                        "type": "doctype",
+                        "name": "Tearp Wages Entry",
+                        "description": _("Information for Wages Entry and Attendance.")
+                        },
                         {
                         "type": "doctype",
+                        "name": "Tearp Wages Reconciliation",
+                        "description": _("Information for Wages Reconciliation.")
+>>>>>>> 98441e14f0a85b9cf5155ea1d48fe37cada4db44
+                        },
+                        {
+                        "type": "doctype",
+<<<<<<< HEAD
                         "name": "Tearp Wages Entry",
                         "description": _("Information for Wages Entry and Attendance.")
                         },
@@ -52,6 +63,8 @@ def get_data():
                         },
                         {
                         "type": "doctype",
+=======
+>>>>>>> 98441e14f0a85b9cf5155ea1d48fe37cada4db44
                         "name": "Tearp Advance Entry",
                         "description": _("Information for Advance Entry.")
                         },
@@ -61,6 +74,28 @@ def get_data():
                         "description": _("Information for LIC Entry.")
                         },
                       ]
+<<<<<<< HEAD
+            },
+        {
+            "label": _("Tearp Report Section"),
+            "icon": "icon-cog",
+            "items": [
+                        {
+                            "type": "report",
+                            "is_query_report": True,
+                            "name": "Tearp Advance Report",
+                            "description": _("Information for Advance Entry")
+                        },
+                        {
+                            "type": "report",
+                            "is_query_report": True,
+                            "name": "Tearp LIC Report",
+                            "description": _("Information for LIC Entry")
+                        }
+                     ]
+        }
+=======
         }
 
+>>>>>>> 98441e14f0a85b9cf5155ea1d48fe37cada4db44
     ]

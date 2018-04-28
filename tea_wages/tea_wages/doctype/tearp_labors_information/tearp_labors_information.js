@@ -6,9 +6,6 @@ frappe.ui.form.on('Tearp Labors Information', {
 
 	}
 });
-
-// Entry of dependent names in dependent child table
-
 // Entry for details of dependents
 frappe.ui.form.on("Tearp Labors Information", "validate", function(frm) {
   for(var i in frm.doc.dependent_name){
@@ -19,8 +16,7 @@ frappe.ui.form.on("Tearp Labors Information", "validate", function(frm) {
 		 frm.doc.dependent_name[i].dependents = frm.doc.dependents;
      }
   });
-
-
+// Age Calculation of dependents whether they are Minor or Adult
 	frappe.ui.form.on("Tearp Labors Information", "validate", function(frm) {
 	  for(var i in frm.doc.dependent_name){
 	    var birth_date=frm.doc.dependent_name[i].dob

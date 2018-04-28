@@ -1,10 +1,6 @@
 from frappe import _
 
-<<<<<<< HEAD
-# Adding heatmap and links for some doctype in Tearp Labors Information 
-=======
 # Creating dashboard in the Tearp labors Information doctype
->>>>>>> wage_aditya
 def get_data():
 	return {
 			'heatmap': True,
