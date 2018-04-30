@@ -38,10 +38,20 @@ def get_data():
                         "name": "Tearp Maternity Register",
                         "description": _("Information for Maternity Registration.")
                         },
+                        {
+                        "type": "doctype",
+                        "name": "Tearp Sick Leave Register",
+                        "description": _("Information for Sick Leave Registration.")
+                        },
+                        {
+                        "type": "doctype",
+                        "name": "Tearp Task Register",
+                        "description": _("Information for Task.")
+                        },
                     ]
             },
         {
-            "label": _("Tearp Wages Section"),
+            "label": _("Tearp Entry Section"),
             "color": "#9d19df",
             "icon": "icon-cog",
             "items": [
@@ -64,6 +74,16 @@ def get_data():
                         "type": "doctype",
                         "name": "Tearp LIC Entry",
                         "description": _("Information for LIC Entry.")
+                        },
+                        {
+                        "type": "doctype",
+                        "name": "Tearp Incentives Register",
+                        "description": _("Information for Incentives.")
+                        },
+                        {
+                        "type": "doctype",
+                        "name": "Tearp Disincentives Register",
+                        "description": _("Information for Disincentives.")
                         },
                       ]
             },
