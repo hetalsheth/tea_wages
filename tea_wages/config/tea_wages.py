@@ -85,6 +85,11 @@ def get_data():
                         "name": "Tearp Disincentives Register",
                         "description": _("Information for Disincentives.")
                         },
+                        {
+                        "type": "doctype",
+                        "name": "Tearp Wages Calculator",
+                        "description": _("Information for Wage Calculation.")
+                        },
                       ]
             },
         {

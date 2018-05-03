@@ -48,6 +48,7 @@ frappe.ui.form.on('Tearp Wages Entry', 'validate', function(frm) {
 
 
 //Download and upload buttons
+cur_frm.cscript = new erpnext.stock.StockReconciliation({frm: cur_frm});
 erpnext.stock.StockReconciliation = erpnext.stock.StockController.extend({
 	setup: function() {
 	var me = this;
@@ -55,7 +56,7 @@ erpnext.stock.StockReconciliation = erpnext.stock.StockController.extend({
 	}
 
 });
-cur_frm.cscript = new erpnext.stock.StockReconciliation({frm: cur_frm});
+
 //Make button
 frappe.ui.form.on('Tearp Wages Entry', {
 	after_save: function(frm) {
