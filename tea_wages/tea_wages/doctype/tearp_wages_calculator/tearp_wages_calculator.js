@@ -4,10 +4,10 @@
 frappe.ui.form.on('Tearp Wages Calculator', {
 	refresh: function(frm) {
 
-	},
-	validate: function(frm) {
-		frm.naming_series = '';
-		name = frm.doc.worker_id+"--"+frm.doc.date;
-		frm.set_value('naming_series', name);
 	}
+	/*validate: function(frm) {
+		frm.naming_series = '';
+		name = frm.doc.worker_id+"--"+frm.doc.record_date;
+		frm.set_value('naming_series', name);
+	},*/
 });

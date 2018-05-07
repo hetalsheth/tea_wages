@@ -5,7 +5,7 @@
 from __future__ import unicode_literals
 import frappe
 from frappe.model.document import Document
-from frappe.utils import getdate,
+from frappe.utils import getdate
 from datetime import datetime
 
 class TearpTaskRegister(Document):

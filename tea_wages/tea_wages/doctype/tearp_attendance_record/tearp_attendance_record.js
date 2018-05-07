@@ -3,6 +3,6 @@
 
 frappe.ui.form.on('Tearp Attendance Record', {
 	refresh: function(frm) {
-
+		frm.add_fetch('worker_id', 'worker_name', 'worker_name')
 	}
 });

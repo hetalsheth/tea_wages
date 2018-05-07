@@ -4,12 +4,6 @@
 frappe.ui.form.on('Tearp Task Register', {
 	refresh: function(frm) {
 		frm.trigger("toggle_fields");
-		//frm.trigger("task");
-	},
-	validate: function(frm) {
-		frm.naming_series = '';
-		name = frm.doc.garden+"--"+frm.doc.task_date;
-		frm.set_value('naming_series', name);
 	},
 
 	managerial_task: function(frm) {
@@ -24,6 +18,22 @@ frappe.ui.form.on('Tearp Task Register', {
 		//frm.toggle_reqd(['labor_list'], frm.doc.special_labor);
 		frm.toggle_display(['display'], frm.doc.no_task);
 	},
+});
+
+frappe.ui.form.on('Tearp Task Register', 'validate', function(frm) {
+	frm.naming_series = '';
+	name = frm.doc.garden+"--"+frm.doc.task_date;
+	frm.set_value('naming_series', name);
+});
+
+frappe.ui.form.on('Tearp Task Register', 'validate', function(frm) {
+	for(var i in frm.doc.non_peak_table){
+		frm.doc.non_peak_table[i].non_peak_date = frm.doc.task_date;
+	}
+
+	for(var i in frm.doc.peak_table) {
+		frm.doc.peak_table[i].peak_date = frm.doc.task_date;
+	}
 });
 
 
@@ -63,17 +73,3 @@ cur_frm.cscript.task_date = function(doc) {
 		frm.refresh_field("period");
 	}
 };
-
-
-/*var toggle_operations = function(frm) {
-	frm.toggle_display("peak_period", cint(frm.doc.task) == 1);
-};
-
-frappe.ui.form.on("Tearp Task Register", "task", function(frm) {
-	if(cint(frm.doc.peak_check)) {
-		frm.set_value("peak_period", []);
-	}
-	toggle_operations(frm);
-});*/
-
-//frappe.ui.form.on("Tearp Task Register")

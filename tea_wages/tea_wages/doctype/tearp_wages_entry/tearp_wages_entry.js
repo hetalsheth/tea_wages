@@ -1,13 +1,7 @@
 // Copyright (c) 2018, Frappe and contributors
 // For license information, please see license.txt
+//Replace "DocType" with the source DocType
 
-frappe.ui.form.on('Tearp Wages Entry', {
-	refresh: function(frm) {
-		for(var i in frm.doc.attendance){
-		cur_frm.add_fetch('tearp_labors_information','worker_name',frm.doc.attendance[i].worker_name);
-		}
-	}
-});
 
 // Reflecting the record_date, garden, book_code in the child table
 frappe.ui.form.on('Tearp Wages Entry', 'validate', function(frm) {
@@ -15,8 +9,8 @@ frappe.ui.form.on('Tearp Wages Entry', 'validate', function(frm) {
 		 frm.doc.attendance[i].record_date = frm.doc.record_date;
      frm.doc.attendance[i].garden = frm.doc.garden;
 		 frm.doc.attendance[i].book_code = frm.doc.book_code;
-		 cur_frm.add_fetch('tearp_labors_information','worker_name',cur_frm.doc.attendance[i].worker_name)
      }
+
   });
 // Defining name series for each wage entry
 frappe.ui.form.on('Tearp Wages Entry', 'validate', function(frm) {
@@ -44,11 +38,19 @@ frappe.ui.form.on('Tearp Wages Entry', 'validate', function(frm) {
 			frm.doc.attendance[i].wage_rate = (rate*(2/3)).toFixed(2);
 		}
 	}
-	 });
+});
+
+frappe.ui.form.on("Tearp Wages Entry", "validate", function(frm) {
+	var total_labor = 0;
+	for(var i in frm.doc.attendance){
+  	total_labor += 1;
+	 	}
+	frm.set_value("total_labors",total_labor);
+});
 
 
 //Download and upload buttons
-cur_frm.cscript = new erpnext.stock.StockReconciliation({frm: cur_frm});
+
 erpnext.stock.StockReconciliation = erpnext.stock.StockController.extend({
 	setup: function() {
 	var me = this;
@@ -56,7 +58,7 @@ erpnext.stock.StockReconciliation = erpnext.stock.StockController.extend({
 	}
 
 });
-
+cur_frm.cscript = new erpnext.stock.StockReconciliation({frm: cur_frm});
 //Make button
 frappe.ui.form.on('Tearp Wages Entry', {
 	after_save: function(frm) {
